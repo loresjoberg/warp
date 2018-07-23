@@ -8,5 +8,13 @@
       "name": "Lore Sjoberg",
       "email": "loresjoberg@gmail.com"
     }
-  ]
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "LoreSjoberg\\Warp\\": "src/Warp"
+    }
+  }
 }

@@ -2,6 +2,7 @@
 
 
 namespace LoreSjoberg\Warp;
+use LoreSjoberg\Warp\Exception\UncallableFunctionException;
 
 
 /**
@@ -25,7 +26,7 @@ namespace LoreSjoberg\Warp;
  *
  * At any rate, to make this work, we are using PHP's __call() magic method,
  * which in this case is the lesser of two evils. This way users have access
- * to the entirety of WordPress, past present and future, while still
+ * to the entirety of WordPress -- past, present, and future -- while still
  * allowing us to mock it up.
  *
  * The downside is code completion. And now, a long list of methods to help
@@ -845,7 +846,7 @@ class Warp
             return call_user_func_array($function, $arguments);
         }
 
-        throw new \RuntimeException('Function ' . $function . "does not exist.");
+        throw new UncallableFunctionException('Function ' . $function . ' does not exist.');
     }
 
 }
