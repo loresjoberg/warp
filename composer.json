@@ -1,0 +1,12 @@
+{
+  "name": "loresjoberg/warp",
+  "description": "A passthrough to WordPress, used to enable unit testing.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lore Sjoberg",
+      "email": "loresjoberg@gmail.com"
+    }
+  ]
+}
